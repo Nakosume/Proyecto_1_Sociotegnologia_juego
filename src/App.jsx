@@ -122,8 +122,8 @@ function App() {
       <div style={{ backgroundColor }}>
         <h1>{title}</h1>
         <h2>{text}</h2>
-        <button onClick={handleGoodButtonClick}><h2>hello</h2></button>
-        <button onClick={handleBadButtonClick}><h2>Fuck u</h2></button>
+        <button onClick={handleGoodButtonClick}><h2>Verde</h2></button>
+        <button onClick={handleBadButtonClick}><h2>Rojo</h2></button>
       </div>
 
     </>
