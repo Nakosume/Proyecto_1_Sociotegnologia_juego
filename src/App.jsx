@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-const textos1 = [
+const good = [
   {
     titulo: "Avanza Rápido",
     descripcion: "Avanza 3 casillas y selecciona a otro jugador para que avance 1 casilla."
@@ -48,7 +48,7 @@ const textos1 = [
   }
 ];
 
-const textos2 = [
+const bad = [
   {
     titulo: "Viento en Contra",
     descripcion: "Retrocede 2 casillas y selecciona a otro jugador para que retroceda 1."
@@ -95,7 +95,7 @@ const textos2 = [
   }
 ];
 
-const textos3 = [
+const challenge = [
   {
     titulo: "Carrera de Dibujo",
     descripcion: "Forma un equipo de dos y escoge a tu compañero. Cada equipo tiene 30 segundos para que ambos miembros dibujen un personaje de videojuego. Los otros equipos votan por el mejor dibujo (sin votar por sí mismos). El equipo ganador recibe un reto verde, mientras que los demás obtienen un reto rojo."
@@ -130,8 +130,8 @@ const textos3 = [
   }
 ]
 
-const generarNumeroAleatorio = () => {
-  const indice = Math.floor(Math.random() * textos1.length);
+const generarNumeroAleatorio = (list) => {
+  const indice = Math.floor(Math.random() * list.length);
   return indice;
 };
 
@@ -147,23 +147,23 @@ function App() {
   }, []);
 
   const handleGoodButtonClick = () => {
-    let rand = generarNumeroAleatorio()
-    setTitle(textos1[rand].titulo)
-    setText(textos1[rand].descripcion)
+    let rand = generarNumeroAleatorio(good)
+    setTitle(good[rand].titulo)
+    setText(good[rand].descripcion)
     setBackgroundColor('green')
   };
 
   const handleBadButtonClick = () => {
-    let rand = generarNumeroAleatorio()
-    setTitle(textos2[rand].titulo)
-    setText(textos2[rand].descripcion)
+    let rand = generarNumeroAleatorio(bad)
+    setTitle(bad[rand].titulo)
+    setText(bad[rand].descripcion)
     setBackgroundColor('red')
   };
 
   const handleChallengeButtonClick = () => {
-    let rand = generarNumeroAleatorio()
-    setTitle(textos3[rand].titulo)
-    setText(textos3[rand].descripcion)
+    let rand = generarNumeroAleatorio(challenge)
+    setTitle(challenge[rand].titulo)
+    setText(challenge[rand].descripcion)
     setBackgroundColor('purple')
   };
 
