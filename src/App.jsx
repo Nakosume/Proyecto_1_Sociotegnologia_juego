@@ -41,6 +41,10 @@ const textos1 = [
   {
     titulo: "Suma de Avances",
     descripcion: "Todos lanzan el dado, avanza según el mayor resultado."
+  },
+  {
+    titulo: "Dado de 8",
+    descripcion: "El siguiente turno tira un dado de ocho caras."
   }
 ];
 
@@ -75,7 +79,7 @@ const textos2 = [
   },
   {
     titulo: "Cambios de Marea",
-    descripcion: "Cambia posiciones con el líder."
+    descripcion: "Cambia posición con el que menos estrellas tienes."
   },
   {
     titulo: "Desafío Inesperado",
@@ -84,6 +88,10 @@ const textos2 = [
   {
     titulo: "Revés Implacable",
     descripcion: "Retrocede 4 casillas pero avanza la mitad en el siguiente turno."
+  },
+  {
+    titulo: "Dado de 4",
+    descripcion: "El siguiente turno tira un dado de cuatro caras."
   }
 ];
 
