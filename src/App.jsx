@@ -168,16 +168,15 @@ function App() {
   };
 
   return (
-    <>
-      <div style={{ backgroundColor }}>
+    <div className='game'  style={{ backgroundColor }}>
         <h1>{title}</h1>
-        <h2>{text}</h2>
-        <button onClick={handleGoodButtonClick}><h2>Verde</h2></button>
-        <button onClick={handleBadButtonClick}><h2>Rojo</h2></button>
-        <button onClick={handleChallengeButtonClick}><h2>Morado</h2></button>
-      </div>
-
-    </>
+        <h3 className='textDisplay'>{text}</h3>
+        <div className='buttonContainer'>
+          <button className='textButton' onClick={handleGoodButtonClick}><h3>Verde</h3></button>
+          <button className='textButton' onClick={handleBadButtonClick}><h3>Rojo</h3></button>
+          <button className='textButton' onClick={handleChallengeButtonClick}><h3>Morado</h3></button>
+        </div>
+    </div>
   )
 }
 
