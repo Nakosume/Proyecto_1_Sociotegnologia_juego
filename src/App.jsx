@@ -95,6 +95,41 @@ const textos2 = [
   }
 ];
 
+const textos3 = [
+  {
+    titulo: "Carrera de Dibujo",
+    descripcion: "Forma un equipo de dos y escoge a tu compañero. Cada equipo tiene 30 segundos para que ambos miembros dibujen un personaje de videojuego. Los otros equipos votan por el mejor dibujo (sin votar por sí mismos). El equipo ganador recibe un reto verde, mientras que los demás obtienen un reto rojo."
+  },
+  {
+    titulo: "Batalla Rítmica",
+    descripcion: "Colócate en equipo de dos y escoge a tu compañero. Se pone una canción conocida. Los equipos deben dar palmaditas al ritmo de la música. El último equipo en seguir el ritmo correctamente obtendrá un reto rojo, y el ganador un reto verde."
+  },
+  {
+    titulo: "Reto de Velocidad",
+    descripcion: "Selecciona a tu compañero y forma un equipo de dos. Cada equipo escribe tantos nombres de juegos de video como pueda en un minuto. El equipo que tenga más nombres válidos recibe un reto verde, mientras que los demás reciben un reto rojo."
+  },
+  {
+    titulo: "Desafío de Equilibrio",
+    descripcion: "Escoge a tu compañero y forma un equipo de dos. Cada equipo coloca un libro sobre la cabeza de un miembro. El equipo que logre mantenerlo más tiempo sin que caiga recibe un reto verde. Los otros equipos enfrentan un reto rojo."
+  },
+  {
+    titulo: "Reto de Reflejos",
+    descripcion: "Elige a tu compañero para formar un equipo de dos. Cada equipo, excepto uno, pone sus manos en la mesa. Un miembro del equipo restante da una señal y los demás deben reaccionar rápidamente. El equipo que reaccione más lento obtendrá un reto rojo; el más rápido gana un reto verde."
+  },
+  {
+    titulo: "Adivinanza de Sinónimos",
+    descripcion: "Forma un equipo de dos escogiendo a tu compañero. Un jugador dice una palabra y el compañero debe decir un sinónimo. El equipo que use más sinónimos correctos recibe un reto verde; los demás, un reto rojo."
+  },
+  {
+    titulo: "Juego de Sinónimos",
+    descripcion: "Colócate en equipo de dos y elige a tu compañero. Un jugador dice una palabra y el compañero debe dar un sinónimo. El primer equipo en fallar enfrenta un reto rojo, y el último en pie gana un reto verde."
+  },
+  {
+    titulo: "Competencia de Emojis",
+    descripcion: "Selecciona a tu compañero y forma un equipo de dos. Cada equipo describe una película famosa usando solo emojis. El primer equipo en adivinar de qué película se trata obtiene un reto verde, y los demás reciben un reto rojo."
+  }
+]
+
 const generarNumeroAleatorio = () => {
   const indice = Math.floor(Math.random() * textos1.length);
   return indice;
@@ -125,6 +160,13 @@ function App() {
     setBackgroundColor('red')
   };
 
+  const handleChallengeButtonClick = () => {
+    let rand = generarNumeroAleatorio()
+    setTitle(textos3[rand].titulo)
+    setText(textos3[rand].descripcion)
+    setBackgroundColor('purple')
+  };
+
   return (
     <>
       <div style={{ backgroundColor }}>
@@ -132,6 +174,7 @@ function App() {
         <h2>{text}</h2>
         <button onClick={handleGoodButtonClick}><h2>Verde</h2></button>
         <button onClick={handleBadButtonClick}><h2>Rojo</h2></button>
+        <button onClick={handleChallengeButtonClick}><h2>Morado</h2></button>
       </div>
 
     </>
